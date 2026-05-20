@@ -5,47 +5,47 @@ import HorizontalCard from "../components/HorizontalCard.astro";
 
 <BaseLayout title = "Projects" sideBarActiveItemID="projects">
   <div>
-    <div class="text-3xl w-full font-bold mb-5">Projects Header</div>
+    <div class="text-3xl w-full font-bold mb-5">Selected Projects</div>
   </div>
 
   <HorizontalCard
-    title="Demo Project 1"
-    img="/post_img.webp"
-    desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-    url="#"
-    badge="NEW"
+    title="SkySync"
+    img="/skysync.webp"
+    desc="A web-based weather dashboard that provides real-time weather information and location-based forecasts through a clean and interactive user interface."
+    url="https://sky-sync-pi.vercel.app/"
+    badge=""
   />
   <div class="divider my-0"></div>
-  <HorizontalCard
-    title="Demo Project 2"
-    img="/post_img.webp"
-    desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-    url="#"
-  />
-
-  <div>
-    <div class="text-3xl w-full font-bold mb-5 mt-10">Projects Header</div>
-  </div>
 
   <HorizontalCard
-    title="Demo Project 3"
-    img="/post_img.webp"
-    desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-    url="#"
-    badge="FOSS"
+    title="Interactive Visualization Dashboards"
+    img="/viz_dashboards.webp"
+    desc="An interactive web version of the original notebook dashboards. Explore where fires are reported, how causes vary by region and year, and how fire size changes across provinces, causes, and severity groups."
+    url="https://canadian-fire-visualization-mw5cggo2fpjppyn9vt9ufe.streamlit.app/"
   />
   <div class="divider my-0"></div>
+
   <HorizontalCard
-    title="Demo Project 4"
-    img="/post_img.webp"
-    desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-    url="#"
+    title="Interactive-Music-Player-with-Rhythm-Game-Mode"
+    img="/rhythm_game.webp"
+    desc="A Java Swing music player + rhythm game with playlist management, duplicate detection, and persistent save/reload + score history. Video demonstration coming soon."
+    url="https://github.com/xhuang512/Interactive-Music-Player-with-Rhythm-Game-Mode"
   />
   <div class="divider my-0"></div>
+
   <HorizontalCard
-    title="Demo Project 5"
-    img="/post_img.webp"
-    desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-    url="#"
+    title="Urban Bike Infrastructure Maintenance System"
+    img="/bike_db.webp"
+    desc="A database-driven web application that manages city-wide shared bicycle networks. Video demonstration coming soon."
+    url="https://github.com/xhuang512/Urban-Bike-Infrastructure-Maintenance-System"
+  />
+  <div class="divider my-0"></div>
+
+  <HorizontalCard
+  title="Spotify Playlist Analyzer"
+    img=""
+    desc="An in-progress data analysis project that uses the Spotify Web API to collect playlist data, clean track-level features, and explore listening patterns through feature engineering and visualization."
+    url="https://github.com/xhuang512/spotify-playlist-analyzer"
+    badge="In Progress"
   />
 </BaseLayout>

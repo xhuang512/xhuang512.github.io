@@ -11,68 +11,49 @@ const last_posts = posts.slice(0, 3);
 
 <BaseLayout sideBarActiveItemID="home">
   <div class="pb-12 mt-5">
-    <div class="text-xl py-1">Hey there 👋</div>
-    <div class="text-5xl font-bold">I'm Manuel Ernesto</div>
-    <div class="text-3xl py-3 font-bold">Software Engineer and Entrepreneur</div>
+    <div class="text-xl py-1">Hey there 👋</div><br>
+    <div class="text-5xl font-bold">I'm Xinghao Huang</div><br>
     <div class="py-2">
-      <text class="text-lg">
-        This is <b>Astrofy</b> a free and open-source template for your Personal Portfolio Website built with Astro and TailwindCSS.
-        Create in minutes a website with Blog, CV, Project Section, Store and RSS Feed. I hope you find
-        it useful!
+    <text class="text-lg">
+        I’m a fourth-year Statistics student at the University of British Columbia interested in Data Science, Machine Learning, and building practical tools that turn data into clear insights.
+      <text class="text-lg"><br><br>
+        My work combines statistical thinking, coding, visualization, and project-based problem solving, with a focus on practical and interpretable data applications.
       </text>
     </div>
     <div class="mt-8">
-      <a class="btn" href="https://twitter.com/manuelernestog" target="_blank"> Let's connect!</a>
-      <a href="https://github.com/manuelernestog/astrofy" target="_blank" class="btn btn-outline ml-5">
-        Get This template
-      </a>
+      <a class="btn btn-primary" href="/contact">Let's connect!</a>
     </div>
   </div>
 
   <div>
-    <div class="text-3xl w-full font-bold mb-2">My last projects {"</>"}</div>
+  <div class="text-3xl w-full font-bold mb-5">What I’m Focused On</div>
   </div>
 
-  <HorizontalCard
-    title="Demo Project 1"
-    img="/post_img.webp"
-    desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-    url="#"
-    badge="NEW"
-  />
-  <div class="divider my-0"></div>
-  <HorizontalCard
-    title="Demo Project 2"
-    img="/post_img.webp"
-    desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-    url="#"
-  />
-  <div class="divider my-0"></div>
-  <HorizontalCard
-    title="Demo Project 3"
-    img="/post_img.webp"
-    desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-    url="#"
-    badge="FOSS"
-  />
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-10">
+    <div class="p-5 rounded-xl border border-base-300 bg-base-100">
+      <div class="text-xl font-bold mb-2">Data Science</div>
+      <p class="opacity-80">
+        Exploring real-world datasets through statistical thinking, feature engineering, visualization, and interpretable analysis.
+      </p>
+    </div>
 
-  <div>
-    <div class="text-3xl w-full font-bold mb-5 mt-10">Latest from blog</div>
+    <div class="p-5 rounded-xl border border-base-300 bg-base-100">
+      <div class="text-xl font-bold mb-2">Applied Statistics</div>
+      <p class="opacity-80">
+        Applying statistical methods to understand uncertainty, compare patterns, and support data-driven conclusions in real-world problems.
+      </p>
+    </div>
+
+    <div class="p-5 rounded-xl border border-base-300 bg-base-100">
+      <div class="text-xl font-bold mb-2">Machine Learning</div>
+      <p class="opacity-80">
+        Learning how models are built, evaluated, and applied responsibly, with interest in practical and explainable ML workflows.
+      </p>
+    </div>
   </div>
 
-  {
-    last_posts.map((post) => (
-      <>
-        <HorizontalCard
-          title={post.data.title}
-          img={post.data.heroImage}
-          desc={post.data.description}
-          url={"/blog/" + createSlug(post.data.title, post.slug)}
-          target="_self"
-          badge={post.data.badge}
-        />
-        <div class="divider my-0" />
-      </>
-    ))
-  }
+  <div class="mb-10">
+    <a href="/projects" class="btn btn-primary">View selected projects</a>
+    <a href="/resume" class="btn btn-outline ml-4">View resume</a>
+  </div>
 </BaseLayout>

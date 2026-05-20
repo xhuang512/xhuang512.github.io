@@ -1,0 +1,242 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+
+<BaseLayout title="About Me" sideBarActiveItemID="about">
+  <div class="mb-16">
+    <div class="text-3xl w-full font-bold mb-5">About Me</div>
+
+    <div class="p-6 rounded-xl border border-base-300 bg-base-100">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-8 text-lg">
+        <!-- Name -->
+        <div class="grid grid-cols-[40px_110px_1fr] items-start gap-4">
+          <svg
+            class="mt-1"
+            xmlns="http://www.w3.org/2000/svg"
+            width="28"
+            height="28"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <rect width="18" height="14" x="3" y="5" rx="2"></rect>
+            <circle cx="8" cy="12" r="2"></circle>
+            <path d="M13 10h5"></path>
+            <path d="M13 14h5"></path>
+          </svg>
+
+          <span class="font-bold">Name:</span>
+          <span class="opacity-70">Xinghao Huang</span>
+        </div>
+
+        <!-- Age -->
+        <div class="grid grid-cols-[40px_110px_1fr] items-start gap-4">
+          <svg
+            class="mt-1"
+            xmlns="http://www.w3.org/2000/svg"
+            width="28"
+            height="28"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <rect width="18" height="18" x="3" y="4" rx="2"></rect>
+            <path d="M16 2v4"></path>
+            <path d="M8 2v4"></path>
+            <path d="M3 10h18"></path>
+          </svg>
+
+          <span class="font-bold">Age:</span>
+          <span class="opacity-70">21</span>
+        </div>
+
+        <!-- Location -->
+        <div class="grid grid-cols-[40px_110px_1fr] items-start gap-4">
+          <svg
+            class="mt-1"
+            xmlns="http://www.w3.org/2000/svg"
+            width="28"
+            height="28"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 0 1 16 0Z"></path>
+            <circle cx="12" cy="10" r="3"></circle>
+          </svg>
+
+          <span class="font-bold">Location:</span>
+          <span class="opacity-70">Vancouver, BC</span>
+        </div>
+
+        <!-- Study -->
+        <div class="grid grid-cols-[40px_110px_1fr] items-start gap-4">
+          <svg
+            class="mt-1"
+            xmlns="http://www.w3.org/2000/svg"
+            width="28"
+            height="28"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path d="M22 10v6"></path>
+            <path d="M2 10l10-5 10 5-10 5z"></path>
+            <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
+          </svg>
+
+          <span class="font-bold">Study:</span>
+          <span class="opacity-70">BSc Statistics, UBC</span>
+        </div>
+
+        <!-- Focus -->
+        <div class="grid grid-cols-[40px_110px_1fr] items-start gap-4">
+          <svg
+            class="mt-1"
+            xmlns="http://www.w3.org/2000/svg"
+            width="28"
+            height="28"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <circle cx="12" cy="12" r="10"></circle>
+            <circle cx="12" cy="12" r="6"></circle>
+            <circle cx="12" cy="12" r="2"></circle>
+          </svg>
+
+          <span class="font-bold">Focus:</span>
+          <span class="opacity-70">Statistics, DS, ML</span>
+        </div>
+
+        <!-- Hobbies -->
+        <div class="grid grid-cols-[40px_110px_1fr] items-start gap-4">
+          <svg
+            class="mt-1"
+            xmlns="http://www.w3.org/2000/svg"
+            width="28"
+            height="28"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path d="M20.8 4.6c-1.5-1.4-3.9-1.4-5.4.1L12 8.1 8.6 4.7C7.1 3.2 4.7 3.2 3.2 4.6c-1.6 1.5-1.6 4 0 5.5L12 19l8.8-8.9c1.6-1.5 1.6-4 0-5.5z"></path>
+          </svg>
+
+          <span class="font-bold">Hobbies:</span>
+          <span class="opacity-70">Basketball, Music</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="mb-16">
+    <div class="text-2xl font-bold mb-5">How I Work</div>
+
+    <p class="text-lg opacity-80 mb-4">
+      I like working in a structured and focused way. When facing a problem, I usually start by breaking it into smaller parts, identifying the core logic, and then improving the solution step by step.
+    </p>
+
+    <p class="text-lg opacity-80">
+      I enjoy long, focused work sessions where I can think deeply, debug carefully, and refine my work over time. Whether I am analyzing data, writing code, or building a project, I value clarity, consistency, and careful reasoning.
+    </p>
+  </div>
+
+  <div class="mb-16">
+    <div class="text-2xl font-bold mb-5">Strengths</div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div class="p-5 rounded-xl border border-base-300 bg-base-100">
+        <div class="text-xl font-bold mb-2">Analytical Thinking</div>
+
+        <p class="opacity-80">
+          I enjoy understanding the structure behind a problem and using logical reasoning to find clear solutions.
+        </p>
+      </div>
+
+      <div class="p-5 rounded-xl border border-base-300 bg-base-100">
+        <div class="text-xl font-bold mb-2">Persistence</div>
+
+        <p class="opacity-80">
+          I am willing to spend time working through difficult concepts, debugging issues, and improving a project until it becomes clearer and stronger.
+        </p>
+      </div>
+
+      <div class="p-5 rounded-xl border border-base-300 bg-base-100">
+        <div class="text-xl font-bold mb-2">Project-Based Learning</div>
+
+        <p class="opacity-80">
+          I learn best by building. Projects help me connect technical concepts with real implementation and practical use cases.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="mb-16">
+    <div class="text-2xl font-bold mb-5">Technical Skills</div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div class="p-5 rounded-xl border border-base-300 bg-base-100">
+        <div class="text-xl font-bold mb-2">Programming & Tools</div>
+
+        <p class="opacity-80">
+          Python, R, SQL, Java, Git/GitHub, Jupyter Notebook, RStudio, VS Code
+        </p>
+      </div>
+
+      <div class="p-5 rounded-xl border border-base-300 bg-base-100">
+        <div class="text-xl font-bold mb-2">Data Science & Statistics</div>
+
+        <p class="opacity-80">
+          Data cleaning, exploratory data analysis, statistical inference, regression analysis, feature engineering, and data visualization
+        </p>
+      </div>
+
+      <div class="p-5 rounded-xl border border-base-300 bg-base-100">
+        <div class="text-xl font-bold mb-2">Machine Learning</div>
+
+        <p class="opacity-80">
+          scikit-learn, model training, preprocessing, classification, regression, model evaluation, and interpretable ML workflows
+        </p>
+      </div>
+
+      <div class="p-5 rounded-xl border border-base-300 bg-base-100">
+        <div class="text-xl font-bold mb-2">Databases & Web Development</div>
+
+        <p class="opacity-80">
+          Oracle SQL, database-backed applications, Node.js, Express, Flask, React, API integration, and interactive dashboards
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="mb-16">
+    <div class="text-2xl font-bold mb-5">Growth Mindset</div>
+
+    <p class="text-lg opacity-80 mb-4">
+      I did not start with a strong technical background, so I understand the value of patience, consistency, and reflection in learning. Many skills that now feel natural to me were built gradually through repeated practice and project experience.
+    </p>
+
+    <p class="text-lg opacity-80">
+      This experience made me more comfortable with unfamiliar tools and challenging problems. I do not expect to understand everything immediately, but I trust the process of learning carefully, asking better questions, and improving through iteration.
+    </p>
+  </div>
+</BaseLayout>
