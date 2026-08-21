@@ -3,6 +3,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import HorizontalCard from "../components/HorizontalCard.astro";
 import { getCollection } from "astro:content";
 import createSlug from "../lib/createSlug"
+import { Image } from "astro:assets";
 
 const posts = (await getCollection("blog")).sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
 
@@ -10,50 +11,114 @@ const last_posts = posts.slice(0, 3);
 ---
 
 <BaseLayout sideBarActiveItemID="home">
-  <div class="pb-12 mt-5">
-    <div class="text-xl py-1">Hey there 👋</div><br>
-    <div class="text-5xl font-bold">I'm Xinghao Huang</div><br>
-    <div class="py-2">
-      <p class="text-lg">
-        I’m a fourth-year Statistics student at the University of British Columbia interested in Data Science, Machine Learning, and building practical tools that turn data into clear insights.
-      </p>
-      <p class="text-lg mt-4">
-        My work combines statistical thinking, coding, visualization, and project-based problem solving, with a focus on practical and interpretable data applications.
-      </p>
+  <section class="grid grid-cols-1 lg:grid-cols-[1.3fr_1fr] gap-10 xl:gap-16 items-center py-6 lg:py-10">
+    <div>
+      <div class="text-5xl font-bold mb-6">I'm Xinghao Huang</div>
+      <div class="space-y-6">
+        <p class="text-lg leading-relaxed opacity-80">
+          I'm a fourth-year Statistics student at the University of British Columbia exploring data science, machine learning, and building practical systems that connect data, analysis, and real-world applications.
+        </p>
+        <p class="text-lg leading-relaxed opacity-80">
+          My work combines statistical methods, programming, and data-driven problem solving. I’m continuously exploring and improving my skills in these areas through academic coursework, personal projects, and hands-on development experience.
+        </p>
+      </div>
     </div>
-    <div class="mt-8">
-      <a class="btn btn-primary" href="/contact">Let's connect!</a>
+
+    <div class="hidden lg:flex justify-center">
+      <div class="avatar">
+        <div class="w-56 xl:w-64 rounded-3xl">
+          <Image format="webp" width={600} height={600} src="/profile.webp" alt="Xinghao Huang" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider my-2"></div>
+
+  <div class="py-4">
+    <div class="text-3xl w-full font-bold mb-6">Areas of Interest</div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="28"
+          height="28"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          class="opacity-80"
+        >
+          <path d="M3 3v18h18"></path>
+          <path d="M18 17V9"></path>
+          <path d="M13 17V5"></path>
+          <path d="M8 17v-3"></path>
+        </svg>
+        <div class="text-xl font-bold mt-3 mb-2">Data Science &amp; Analytics</div>
+        <p class="opacity-80 leading-relaxed">
+          I enjoy analyzing problems and understanding patterns behind real-world situations. My statistics background has helped me develop a structured way of thinking and explore problems through data.
+        </p>
+      </div>
+
+      <div>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="28"
+          height="28"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          class="opacity-80"
+        >
+          <rect width="16" height="16" x="4" y="4" rx="2"></rect>
+          <rect width="6" height="6" x="9" y="9"></rect>
+          <path d="M15 2v2"></path>
+          <path d="M15 20v2"></path>
+          <path d="M2 15h2"></path>
+          <path d="M2 9h2"></path>
+          <path d="M20 15h2"></path>
+          <path d="M20 9h2"></path>
+          <path d="M9 2v2"></path>
+          <path d="M9 20v2"></path>
+        </svg>
+        <div class="text-xl font-bold mt-3 mb-2">Machine Learning</div>
+        <p class="opacity-80 leading-relaxed">
+          Machine learning connects my background in statistics and computer science. I am interested in building models that learn from data and plan to continue developing in this area.
+        </p>
+      </div>
+
+      <div>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="28"
+          height="28"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          class="opacity-80"
+        >
+          <ellipse cx="12" cy="5" rx="9" ry="3"></ellipse>
+          <path d="M3 5V19A9 3 0 0 0 21 19V5"></path>
+          <path d="M3 12A9 3 0 0 0 21 12"></path>
+        </svg>
+        <div class="text-xl font-bold mt-3 mb-2">Data Systems &amp; Applications</div>
+        <p class="opacity-80 leading-relaxed">
+          Through database coursework and software development experience, I became interested in building reliable systems that support data processing and real-world applications.
+        </p>
+      </div>
     </div>
   </div>
 
-  <div>
-  <div class="text-3xl w-full font-bold mb-5">What I’m Focused On</div>
-  </div>
-
-  <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-10">
-    <div class="p-5 rounded-xl border border-base-300 bg-base-100">
-      <div class="text-xl font-bold mb-2">Data Science</div>
-      <p class="opacity-80">
-        Exploring real-world datasets through statistical thinking, feature engineering, visualization, and interpretable analysis.
-      </p>
-    </div>
-
-    <div class="p-5 rounded-xl border border-base-300 bg-base-100">
-      <div class="text-xl font-bold mb-2">Applied Statistics</div>
-      <p class="opacity-80">
-        Applying statistical methods to understand uncertainty, compare patterns, and support data-driven conclusions in real-world problems.
-      </p>
-    </div>
-
-    <div class="p-5 rounded-xl border border-base-300 bg-base-100">
-      <div class="text-xl font-bold mb-2">Machine Learning</div>
-      <p class="opacity-80">
-        Learning how models are built, evaluated, and applied responsibly, with interest in practical and explainable ML workflows.
-      </p>
-    </div>
-  </div>
-
-  <div class="mb-10">
+  <div class="mt-8 mb-6">
     <a href="/projects" class="btn btn-primary">View selected projects</a>
     <a href="/cv" class="btn btn-outline ml-4">View resume</a>
   </div>
