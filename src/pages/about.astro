@@ -1,5 +1,6 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import { Image } from "astro:assets";
 ---
 
 <BaseLayout title="About Me" sideBarActiveItemID="about">
@@ -148,81 +149,71 @@ import BaseLayout from "../layouts/BaseLayout.astro";
     </div>
   </div>
 
-  <div class="mb-16">
-    <div class="text-2xl font-bold mb-5">How I Work</div>
+  <div class="mb-24">
+    <div class="text-2xl font-bold mb-5">Background</div>
 
-    <p class="text-lg opacity-80 mb-4">
-      I like working in a structured and focused way. When facing a problem, I usually start by breaking it into smaller parts, identifying the core logic, and then improving the solution step by step.
-    </p>
+    <div class="grid grid-cols-1 lg:grid-cols-[2.4fr_1fr] gap-10 items-start">
+      <div>
+        <p class="text-lg opacity-80 mb-7">
+          I was born and raised in <a href="https://en.wikipedia.org/wiki/Changchun" target="_blank" rel="noopener noreferrer" class="text-sky-700 hover:text-sky-800 hover:underline underline-offset-2">Changchun, Jilin Province, China</a>. Changchun is a city in northeastern China, a region with some of the coldest winters in the country. Growing up in this environment was an important part of my early life. I first came to Canada when I was around 14 years old, and since then I have spent years studying and growing in a different cultural environment.
+        </p>
 
-    <p class="text-lg opacity-80">
-      I enjoy long, focused work sessions where I can think deeply, debug carefully, and refine my work over time. Whether I am analyzing data, writing code, or building a project, I value clarity, consistency, and careful reasoning.
-    </p>
-  </div>
-
-  <div class="mb-16">
-    <div class="text-2xl font-bold mb-5">Strengths</div>
-
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-      <div class="p-5 rounded-xl border border-base-300 bg-base-100">
-        <div class="text-xl font-bold mb-2">Analytical Thinking</div>
-
-        <p class="opacity-80">
-          I enjoy understanding the structure behind a problem and using logical reasoning to find clear solutions.
+        <p class="text-lg opacity-80">
+          Living between Chinese and Canadian cultures has shaped the way I see problems and communicate with others. It has also taught me to adapt to new environments, become more independent, and approach challenges from different perspectives.
         </p>
       </div>
 
-      <div class="p-5 rounded-xl border border-base-300 bg-base-100">
-        <div class="text-xl font-bold mb-2">Persistence</div>
-
-        <p class="opacity-80">
-          I am willing to spend time working through difficult concepts, debugging issues, and improving a project until it becomes clearer and stronger.
-        </p>
-      </div>
-
-      <div class="p-5 rounded-xl border border-base-300 bg-base-100">
-        <div class="text-xl font-bold mb-2">Project-Based Learning</div>
-
-        <p class="opacity-80">
-          I learn best by building. Projects help me connect technical concepts with real implementation and practical use cases.
-        </p>
+      <div class="relative w-40 sm:w-48 mx-auto lg:mx-0 lg:ml-auto lg:mt-1">
+        <Image
+          src="/changchun-view.jpg"
+          alt="A view over Changchun, the city where I grew up"
+          width={899}
+          height={1200}
+          class="w-full h-48 sm:h-56 rounded-xl object-cover"
+        />
+        <Image
+          src="/nanhu-park.jpg"
+          alt="A frozen lake at Nanhu Park in Changchun during winter"
+          width={1200}
+          height={900}
+          class="absolute -bottom-5 -right-6 w-24 sm:w-28 h-20 sm:h-[5.5rem] rounded-lg object-cover ring-4 ring-base-100"
+        />
       </div>
     </div>
   </div>
 
   <div class="mb-16">
-    <div class="text-2xl font-bold mb-5">Technical Skills</div>
-
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-      <div class="p-5 rounded-xl border border-base-300 bg-base-100">
-        <div class="text-xl font-bold mb-2">Programming & Tools</div>
-
-        <p class="opacity-80">
-          Python, R, SQL, Java, Git/GitHub, Jupyter Notebook, RStudio, VS Code
-        </p>
+    <div class="grid grid-cols-1 lg:grid-cols-[1fr_2.4fr] gap-10 items-start">
+      <div class="relative w-44 sm:w-52 mx-auto lg:mx-0 lg:mr-auto lg:mt-1 order-2 lg:order-1">
+        <Image
+          src="/stats-notes.jpg"
+          alt="A handwritten page of statistics formulas from my coursework"
+          width={1000}
+          height={1302}
+          class="w-full aspect-[1000/1302] rounded-xl object-cover"
+        />
+        <Image
+          src="/hackcamp-badge.jpg"
+          alt="My Hack Camp 2025 badge in front of the weather app I was building there"
+          width={900}
+          height={1011}
+          class="absolute -bottom-6 -left-8 w-24 sm:w-28 aspect-[900/1011] rounded-lg object-cover ring-4 ring-base-100"
+        />
       </div>
 
-      <div class="p-5 rounded-xl border border-base-300 bg-base-100">
-        <div class="text-xl font-bold mb-2">Data Science & Statistics</div>
+      <div class="order-1 lg:order-2">
+        <div class="text-2xl font-bold mb-5 text-right">How I Work</div>
 
-        <p class="opacity-80">
-          Data cleaning, exploratory data analysis, statistical inference, regression analysis, feature engineering, and data visualization
+        <p class="text-lg opacity-80 mb-7">
+          I prefer working in a structured and focused way. When facing a problem, I usually start by breaking it into smaller parts, understanding the core logic, and gradually improving the solution step by step.
         </p>
-      </div>
 
-      <div class="p-5 rounded-xl border border-base-300 bg-base-100">
-        <div class="text-xl font-bold mb-2">Machine Learning</div>
-
-        <p class="opacity-80">
-          scikit-learn, model training, preprocessing, classification, regression, model evaluation, and interpretable ML workflows
+        <p class="text-lg opacity-80 mb-7">
+          I believe meaningful progress comes from consistent effort over time. Rather than relying on short bursts of work, I prefer building my knowledge and improving through continuous learning. This applies whether I am analyzing data, writing code, or developing a project.
         </p>
-      </div>
 
-      <div class="p-5 rounded-xl border border-base-300 bg-base-100">
-        <div class="text-xl font-bold mb-2">Databases & Web Development</div>
-
-        <p class="opacity-80">
-          Oracle SQL, database-backed applications, Node.js, Express, Flask, React, API integration, and interactive dashboards
+        <p class="text-lg opacity-80">
+          I enjoy focused work where I can think carefully, debug problems, and refine my ideas. I value clarity, consistency, and careful reasoning, and I try to bring this mindset into everything I work on.
         </p>
       </div>
     </div>
@@ -231,12 +222,122 @@ import BaseLayout from "../layouts/BaseLayout.astro";
   <div class="mb-16">
     <div class="text-2xl font-bold mb-5">Growth Mindset</div>
 
-    <p class="text-lg opacity-80 mb-4">
-      I did not start with a strong technical background, so I understand the value of patience, consistency, and reflection in learning. Many skills that now feel natural to me were built gradually through repeated practice and project experience.
-    </p>
+    <div class="grid grid-cols-1 lg:grid-cols-[2.4fr_1fr] gap-10 items-start">
+      <div>
+        <p class="text-lg opacity-80 mb-4">
+          Many of the skills and interests I have today were not developed overnight. I started my journey without a clear direction and gradually discovered my interests through exploration, challenges, and continuous learning.
+        </p>
 
-    <p class="text-lg opacity-80">
-      This experience made me more comfortable with unfamiliar tools and challenging problems. I do not expect to understand everything immediately, but I trust the process of learning carefully, asking better questions, and improving through iteration.
-    </p>
+        <p class="text-lg opacity-80 mb-4">
+          Along the way, I have learned to become more comfortable with uncertainty and unfamiliar situations. Instead of always choosing the easiest path, I have tried to challenge myself, take on new opportunities, and continue growing through experience.
+        </p>
+
+        <p class="text-lg opacity-80">
+          This mindset has shaped how I approach learning and future challenges. I believe meaningful progress comes from consistent effort, reflection, and the willingness to keep moving forward.
+        </p>
+      </div>
+
+      <div class="relative w-40 sm:w-48 mx-auto lg:mx-0 lg:ml-auto mt-4 lg:mt-5">
+        <Image
+          src="/road-sunrise.jpg"
+          alt="A bright sunrise drive, representing growth and moving forward"
+          width={700}
+          height={793}
+          class="relative z-10 w-full aspect-[700/793] rounded-xl object-cover ring-4 ring-base-100"
+        />
+        <Image
+          src="/road-dark-canada.jpg"
+          alt="An early, uncertain morning drive in Canada, representing an earlier stage of adapting"
+          width={700}
+          height={933}
+          class="absolute -top-6 -left-20 sm:-top-7 sm:-left-24 w-24 sm:w-28 aspect-[700/933] rounded-lg object-cover ring-4 ring-base-100"
+        />
+      </div>
+    </div>
+  </div>
+
+  <div class="mb-16">
+    <div class="text-2xl font-bold mb-5">Beyond Work</div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-[1fr_2.4fr] gap-10 items-start">
+      <div class="relative w-28 sm:w-36 mx-auto lg:mx-0 lg:mr-auto lg:mt-1 order-2 lg:order-1">
+        <Image
+          src="/warriors-chase-center.jpg"
+          alt="Chase Center during a Golden State Warriors game I attended in the Bay Area"
+          width={700}
+          height={1033}
+          class="w-full aspect-[700/1033] rounded-xl object-cover"
+        />
+        <Image
+          src="/jilin-basketball.jpg"
+          alt="A Jilin basketball game I watched growing up in Changchun"
+          width={700}
+          height={525}
+          class="absolute -bottom-5 -left-10 w-20 sm:w-24 aspect-[700/525] rounded-lg object-cover ring-4 ring-base-100"
+        />
+      </div>
+
+      <div class="order-1 lg:order-2">
+        <div class="text-xl font-semibold mb-3 text-right">Basketball</div>
+
+        <p class="text-lg opacity-80">
+          Sports have always been more than entertainment for me; they connect different stages and places in my life. Growing up in Changchun, basketball was already a big part of my life. I followed local teams like Jilin while also following the Golden State Warriors, and both have remained part of my journey over the years. Watching the Warriors go through their rise, struggles, and return to championship success reminds me that progress often comes through consistency and persistence, something I have experienced while adapting and growing in a new country.
+        </p>
+      </div>
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-[2.4fr_1fr] gap-10 items-start mt-20">
+      <div>
+        <div class="text-xl font-semibold mb-3">Soccer</div>
+
+        <p class="text-lg opacity-80">
+          Soccer has followed a similar path. I grew up watching Changchun Yatai, and after moving to Canada, I started following the Vancouver Whitecaps and even attended larger events like the World Cup. Watching football in these different places has shown me how the sport can connect people from different backgrounds, even when the language or culture is different. For me, sports are not just something to watch; they are part of how I experienced moving between two countries.
+        </p>
+      </div>
+
+      <div class="relative w-44 sm:w-52 mx-auto lg:mx-0 lg:ml-auto lg:mt-1">
+        <Image
+          src="/world-cup-stadium.jpg"
+          alt="A FIFA World Cup match at BC Place in Canada"
+          width={900}
+          height={485}
+          class="w-full aspect-[900/485] rounded-xl object-cover"
+        />
+        <Image
+          src="/changchun-yatai.jpg"
+          alt="A Changchun Yatai football match I watched growing up"
+          width={900}
+          height={669}
+          class="absolute -bottom-4 -right-16 sm:-right-20 w-20 sm:w-24 aspect-[900/669] rounded-lg object-cover ring-4 ring-base-100"
+        />
+      </div>
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-[1fr_2.4fr] gap-10 items-start mt-20">
+      <div class="relative w-44 sm:w-52 mx-auto lg:mx-0 lg:mr-auto lg:mt-1 order-2 lg:order-1">
+        <Image
+          src="/linkin-park-concert.jpg"
+          alt="Linkin Park performing to a full arena in Vancouver"
+          width={900}
+          height={596}
+          class="w-full aspect-[900/596] rounded-xl object-cover"
+        />
+        <Image
+          src="/charlie-puth-concert.jpg"
+          alt="Charlie Puth performing, seen on the big screen at his Vancouver concert"
+          width={700}
+          height={700}
+          class="absolute -bottom-12 -left-14 w-24 sm:w-28 aspect-square rounded-lg object-cover ring-4 ring-base-100"
+        />
+      </div>
+
+      <div class="order-1 lg:order-2">
+        <div class="text-xl font-semibold mb-3 text-right">Music</div>
+
+        <p class="text-lg opacity-80">
+          Music has been a companion throughout different stages of my life. Many songs I first discovered when I was younger are connected to specific memories, from learning English as a child to experiencing new moments years later. Artists like Charlie Puth and Linkin Park have stayed with me across different periods of my life. Hearing their songs again after many years often brings back old memories while also showing how my perspective has changed. Attending their concerts in Vancouver allowed me to reconnect with those memories and experience how music can connect different moments across time and places.
+        </p>
+      </div>
+    </div>
   </div>
 </BaseLayout>
