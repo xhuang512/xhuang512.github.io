@@ -1,6 +1,6 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-import HorizontalCard from "../components/HorizontalCard.astro";
+import ProjectCard from "../components/ProjectCard.astro";
 ---
 
 <BaseLayout title = "Projects" sideBarActiveItemID="projects">
@@ -8,44 +8,55 @@ import HorizontalCard from "../components/HorizontalCard.astro";
     <div class="text-3xl w-full font-bold mb-5">Selected Projects</div>
   </div>
 
-  <HorizontalCard
-    title="SkySync"
-    img="/skysync.webp"
-    desc="A web-based weather dashboard that provides real-time weather information and location-based forecasts through a clean and interactive user interface."
-    url="https://sky-sync-pi.vercel.app/"
-    badge=""
-  />
-  <div class="divider my-0"></div>
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+    <ProjectCard
+      number="01"
+      category="Web Application"
+      title="SkySync"
+      img="/skysync.webp"
+      imgWidth={980}
+      imgHeight={557}
+      desc="A web-based application that combines real-time weather data with personalized playlist generation to create customized music experiences."
+      url="https://sky-sync-pi.vercel.app/"
+      techStack={["React", "API", "JavaScript", "Frontend"]}
+      browserFrame
+    />
 
-  <HorizontalCard
-    title="Interactive Visualization Dashboards"
-    img="/viz_dashboards.webp"
-    desc="An interactive web version of the original notebook dashboards. Explore where fires are reported, how causes vary by region and year, and how fire size changes across provinces, causes, and severity groups."
-    url="https://canadian-fire-visualization-mw5cggo2fpjppyn9vt9ufe.streamlit.app/"
-  />
-  <div class="divider my-0"></div>
+    <ProjectCard
+      number="02"
+      category="Data Visualization"
+      title="Interactive Visualization Dashboards"
+      img="/viz_dashboards.webp"
+      imgWidth={980}
+      imgHeight={522}
+      desc="Explore wildfire patterns across Canada through interactive visualizations, including regional distribution, causes, yearly trends, and severity analysis."
+      url="https://canadian-fire-visualization-mw5cggo2fpjppyn9vt9ufe.streamlit.app/"
+      techStack={["Python", "Altair", "Data Visualization", "Data Analysis"]}
+      browserFrame
+    />
 
-  <HorizontalCard
-    title="Interactive-Music-Player-with-Rhythm-Game-Mode"
-    img="/rhythm_game.webp"
-    desc="A Java Swing music player + rhythm game with playlist management, duplicate detection, and persistent save/reload + score history. Video demonstration coming soon."
-    url="https://github.com/xhuang512/Interactive-Music-Player-with-Rhythm-Game-Mode"
-  />
-  <div class="divider my-0"></div>
+    <ProjectCard
+      number="03"
+      category="Desktop Application"
+      title="Interactive Music Player with Rhythm Game"
+      img="/rhythm_game.webp"
+      imgWidth={980}
+      imgHeight={617}
+      desc="A Java Swing music player and rhythm game featuring playlist management, duplicate detection, basic playback controls, persistent save/load functionality, and score history."
+      url="https://github.com/xhuang512/Interactive-Music-Player-with-Rhythm-Game-Mode"
+      techStack={["Java", "Java Swing", "OOP"]}
+    />
 
-  <HorizontalCard
-    title="Urban Bike Infrastructure Maintenance System"
-    img="/bike_db.webp"
-    desc="A database-driven web application that manages city-wide shared bicycle networks. Video demonstration coming soon."
-    url="https://github.com/xhuang512/Urban-Bike-Infrastructure-Maintenance-System"
-  />
-  <div class="divider my-0"></div>
-
-  <HorizontalCard
-  title="Spotify Playlist Analyzer"
-    img=""
-    desc="An in-progress data analysis project that uses the Spotify Web API to collect playlist data, clean track-level features, and explore listening patterns through feature engineering and visualization."
-    url="https://github.com/xhuang512/spotify-playlist-analyzer"
-    badge="In Progress"
-  />
+    <ProjectCard
+      number="04"
+      category="Database System"
+      title="Urban Bike Infrastructure Maintenance System"
+      img="/bike_db.webp"
+      imgWidth={980}
+      imgHeight={557}
+      desc="A database-driven web application for managing shared bicycle networks through dedicated views for bicycle, technician, and maintenance management."
+      url="https://github.com/xhuang512/Urban-Bike-Infrastructure-Maintenance-System"
+      techStack={["Oracle", "Database", "SQL", "Web Application"]}
+    />
+  </div>
 </BaseLayout>

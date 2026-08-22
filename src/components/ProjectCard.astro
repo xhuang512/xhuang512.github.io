@@ -1,0 +1,85 @@
+---
+const {
+  number,
+  category,
+  title,
+  desc,
+  img,
+  imgWidth = 980,
+  imgHeight = 551,
+  url,
+  techStack = [],
+  browserFrame = false,
+  target = "_blank",
+} = Astro.props;
+import { Image } from "astro:assets";
+
+const isGitHub = url.includes("github.com");
+const linkLabel = isGitHub ? "View on GitHub" : "View Live";
+---
+
+<a
+  href={url}
+  target={target}
+  rel="noopener noreferrer"
+  class="group flex flex-col h-full rounded-xl border border-base-300/70 bg-base-100 overflow-hidden transition-all duration-300 ease-out hover:-translate-y-1 hover:border-base-300 hover:shadow-lg"
+>
+  {
+    img && (
+      <div class="border-b border-base-300/70">
+        {browserFrame && (
+          <div class="flex items-center gap-1.5 px-3 py-2 bg-base-200/60 border-b border-base-300/70">
+            <span class="w-2 h-2 rounded-full bg-base-content/15" />
+            <span class="w-2 h-2 rounded-full bg-base-content/15" />
+            <span class="w-2 h-2 rounded-full bg-base-content/15" />
+          </div>
+        )}
+        <div class="overflow-hidden bg-base-200/40 h-48 sm:h-56">
+          <Image
+            src={img}
+            width={imgWidth}
+            height={imgHeight}
+            format="webp"
+            alt={title}
+            class="w-full h-full object-contain p-3 transition-transform duration-500 ease-out group-hover:scale-105"
+          />
+        </div>
+      </div>
+    )
+  }
+
+  <div class="flex flex-col grow p-6">
+    <div class="flex items-center gap-2.5 mb-3">
+      <span class="text-xs font-mono text-base-content/35">{number}</span>
+      <span class="w-3 h-px bg-base-300" />
+      <span class="text-[11px] font-medium tracking-[0.15em] text-base-content/45 uppercase">
+        {category}
+      </span>
+    </div>
+
+    <h3 class="font-bold mb-2 text-xl">{title}</h3>
+
+    <p class="text-base-content/65 leading-relaxed text-[0.95rem] mb-4">
+      {desc}
+    </p>
+
+    {
+      techStack.length > 0 && (
+        <div class="flex flex-wrap gap-1.5 mb-5">
+          {techStack.map((t) => (
+            <span class="px-2 py-0.5 rounded-md border border-base-300 bg-base-200/60 text-xs text-base-content/70">
+              {t}
+            </span>
+          ))}
+        </div>
+      )
+    }
+
+    <div class="mt-auto inline-flex items-center gap-1 text-sm font-medium text-base-content/70 group-hover:text-base-content transition-colors w-fit">
+      {linkLabel}
+      <span class="inline-block transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5">
+        &#8599;
+      </span>
+    </div>
+  </div>
+</a>
